@@ -1,6 +1,7 @@
-**Apresentação**
-================
-**Dr. Gerrio Barbosa**
+
+
+
+**Núcleo de Estudos Raciais do Insper**
 
 <div style="text-align: justify;">
 &#10;
