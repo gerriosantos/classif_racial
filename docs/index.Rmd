@@ -1,0 +1,77 @@
+---
+title: ""
+#subtitle: ""
+#institute: ""
+author: "Gerrio Barbosa"
+date: ""
+#date: "`r Sys.Date()`"
+encoding: "UTF-8"
+output:
+  xaringan::moon_reader:
+    #lib_dir: libs
+    #chakra: libs/remark-latest.min.js
+    css: ["xaringan-style.css"]
+    nature:
+      ratio: 16:9
+      #highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      # slideNumberFormat: c()
+# params:
+#   nome:  
+---
+
+class: title-slide, top, left, inverse
+background-image: url("capa_neri.png")
+background-position: center
+background-size: 1000px 800px
+
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+options(htmltools.dir.version = FALSE)
+```
+
+
+
+```{r}
+
+# Lista de figuras
+lista_fig <- fs::dir_ls('join_saeb_censo_demo_esc_NAs/')
+lista_fig <- lista_fig[-6]
+br <- fs::dir_ls('join_saeb_censo_demo_esc_NAs/', regexp = 'BRASIL')
+
+lista_fig <- c(br, lista_fig)
+
+
+
+# Código para gerar uma lista de slides
+
+markdown_slides <- purrr::map_chr(
+  lista_fig, 
+  ~ paste("---\n\n<div style='text-align: center;'><img src='", .x, "' style='width:90%;' /></div>\n", sep = "")
+  #~ paste("---\n\n<img src='", .x, "' style='width:90%;' />\n", sep = "")
+)
+
+
+```
+
+
+
+```{r echo=FALSE, results='asis'}
+# Código para juntar os slides
+cat(markdown_slides, sep = "\n")
+```
+
+
+
+
+
+
+
+
+
+
+
+
