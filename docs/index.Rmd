@@ -65,7 +65,19 @@ cat(markdown_slides, sep = "\n")
 ```
 
 
+---
 
+<div style="text-align: center;">
+
+### `codigo no github`
+
+
+```{r, echo=FALSE, fig.align='center'}
+
+url <- "https://github.com/gerriosantos/classif_racial"
+plot(qrcode::qr_code(url, ecl = 'M'), col = c('white', '#a11647'))
+
+```
 
 
 
