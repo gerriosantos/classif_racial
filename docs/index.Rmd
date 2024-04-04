@@ -80,7 +80,6 @@ cat(markdown_slides, sep = "\n")
 <div style='text-align: center;'>Código no Github</div>
 
 
-
 ```{r, echo=FALSE, fig.align='center'}
 
 url <- "https://github.com/gerriosantos/classif_racial"
