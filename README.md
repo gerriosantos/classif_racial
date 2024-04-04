@@ -7,6 +7,6 @@
 &#10;
 &#10;
 
-- [Slide](https://github.com/gerriosantos/classif_racial)
+- [Slide](https://gerriosantos.github.io/classif_racial/#1)
 
 ![](README_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
