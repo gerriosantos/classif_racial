@@ -77,8 +77,8 @@ cat(markdown_slides, sep = "\n")
 
 ---
 
+<div style='text-align: center;'>Código no Github</div>
 
-### `codigo no github`
 
 
 ```{r, echo=FALSE, fig.align='center'}
