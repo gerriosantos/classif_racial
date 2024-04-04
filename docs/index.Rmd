@@ -45,13 +45,23 @@ br <- fs::dir_ls('join_saeb_censo_demo_esc_NAs/', regexp = 'BRASIL')
 lista_fig <- c(br, lista_fig)
 
 
+logo_path <- "logo_NERI.jpeg"
+
+
 
 # Código para gerar uma lista de slides
 
+# markdown_slides <- purrr::map_chr(
+#   lista_fig, 
+#   ~ paste("---\n\n<div style='text-align: center;'><img src='", .x, "' style='width:90%;' /></div>\n", sep = "")
+#   #~ paste("---\n\n<img src='", .x, "' style='width:90%;' />\n", sep = "")
+# )
+
+
 markdown_slides <- purrr::map_chr(
   lista_fig, 
-  ~ paste("---\n\n<div style='text-align: center;'><img src='", .x, "' style='width:90%;' /></div>\n", sep = "")
-  #~ paste("---\n\n<img src='", .x, "' style='width:90%;' />\n", sep = "")
+  ~ paste("---\n\n<div style='text-align: center;'><img src='", .x, "' style='width:90%;' /></div>",
+           "<div style='position: fixed; bottom: 10px; left: 10px;'><img src='", logo_path, "' style='width:150px;' /></div>\n", sep = "")
 )
 
 
@@ -67,7 +77,6 @@ cat(markdown_slides, sep = "\n")
 
 ---
 
-<div style="text-align: center;">
 
 ### `codigo no github`
 
@@ -79,6 +88,7 @@ plot(qrcode::qr_code(url, ecl = 'M'), col = c('white', '#a11647'))
 
 ```
 
+<div style='position: fixed; bottom: 10px; left: 10px;'><img src= logo_NERI.jpeg style='width:150px;' /></div>
 
 
 
